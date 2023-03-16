@@ -1,4 +1,40 @@
 body {
-    background-color: aqua;
+    background-color: whitesmoke;
     font-size: 18px;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
+.header {
+    display: block; /*Если убрать дисплей станет инлайн и контейнер не станет по центру и не отработает*/
+    margin: 0 auto;
+    padding: 20px 0 20px;
+    background-color: #0a0a0a;
+}
+.container {
+    display: block; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.menu {
+    display: flex;
+    gap: 30%; /* Если не будет поддерживаться, то можно прописать в "menu-item" padding-right:*/
+}
+
+.menu-link, .phone  {
+    text-decoration: none;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: aliceblue;
+    }
