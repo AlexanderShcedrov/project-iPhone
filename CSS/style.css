@@ -93,6 +93,11 @@ body {
 .news-info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.news-info img {
+    width: 381.47px;
+    height: 370px;
 }
 .news-title {
     margin-bottom: 100px;
@@ -154,4 +159,51 @@ font-family: inherit;
 }
 .item img {
 margin-bottom: 20px;
+}
+
+/*3 секция contakts*/
+
+.contakts {
+max-height: 600px;
+}
+.contacts-inner {
+display: flex;
+align-items: center;
+background-color: #574B63;
+justify-content: space-between;
+}
+
+.color-title {
+    color: #fff;
+}
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+}
+.contacts-form p{
+    margin-top: 30px;
+    color: #fff;
+}
+.contacts-input {
+    width: 80%;
+    padding: 5px 10px;
+    margin: 20px 50px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent; /* Добавил прозрачность. Что бы не дублировать бэграунд*/
+    outline: none; /*При нажатии нету границы*/
+    font-size: 18px;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 400;
+}
+    
+.contacts-input::placeholder{
+    font-size: 22px;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 400;
 }
