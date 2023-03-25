@@ -23,10 +23,21 @@ body {
 }
 .container {
     display: block; 
-    max-width: 1200px;
+    max-width: 410px;
     margin: 0 auto;
     padding: 0 15px;
     
+}
+@media (min-width: 768px){
+    .container {
+        max-width:  768px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width:  1200px;
+    }
 }
 .nav {
     display: flex;
@@ -75,6 +86,7 @@ body {
 .headline-img {
      margin-bottom: 55px; /*Отсупы добавляем всегда снизу */
 }
+
 .headline-btn {
     text-decoration: none;
     padding: 22px 120px;
@@ -85,6 +97,7 @@ body {
     background-color: #490E84;
     border-radius: 30px;
 }
+
 .news {
     display: flex;
     margin-bottom: 60px;
@@ -95,6 +108,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .news-info img {
     width: 381.47px;
     height: 370px;
@@ -128,7 +142,7 @@ body {
     /*Вторая секция color*/
 .color {
     margin-bottom: 150px;
-font-family: inherit;
+    font-family: inherit;
 }    
 .color-title {
     margin-bottom: 60px;
@@ -147,6 +161,7 @@ font-family: inherit;
     justify-content: center;
     text-align: center;
 }
+
 .item b{
     display: inline-block;
     margin-bottom: 20px;
@@ -163,9 +178,6 @@ margin-bottom: 20px;
 
 /*3 секция contakts*/
 
-.contakts {
-max-height: 600px;
-}
 .contacts-inner {
 display: flex;
 align-items: center;
@@ -173,6 +185,14 @@ background-color: #574B63;
 justify-content: space-between;
 }
 
+.inner-1 {
+    width: 50%;
+    display: flex;
+}
+.inner-2  img{
+    display: block;
+    width: 100%;
+}
 .color-title {
     color: #fff;
 }
@@ -241,6 +261,7 @@ justify-content: space-between;
     
 }
 .phone-footer {
+    text-align: right;
     text-decoration: none;
     font-family: inherit;
     font-style: normal;
@@ -248,4 +269,161 @@ justify-content: space-between;
     font-size: 24px;
     line-height: 29px;
     color: #717171;
+}
+
+@media  (max-width: 1200px) {
+    .headline-img {
+        width: 100%;
+    }
+    .color-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .item {
+        width: 50%;
+    }
+    .item p {
+        margin-bottom: 20px;
+    }
+    
+    .contacts-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .inner-1, .inner-2{
+        width: 100%;
+    }
+}
+
+.menu-btn {
+    display: none;
+}
+@media  (max-width: 768px) {
+    /*burger*/
+    .menu-btn {
+        position: relative;
+        z-index: 50;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        order: 1;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .logo,
+    .phone {
+        position: relative;
+        z-index: 50;
+    }
+    .btn-line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition: .5s ease; /* Анимация бургера 0,3 секунды. Начинается быстро, замедняется в клнце*/
+    }
+    .btn-line:nth-child(1) {
+        top: 0px;
+    }
+    .btn-line:nth-child(2) {
+        top: 20px;
+    }
+    .btn-line:nth-child(3) {
+        top: 20px;
+    }
+    .btn-line:nth-child(4) {
+        top: 40px;
+    }
+    .menu-open .btn-line:nth-child(1){
+        transform: scale(0);
+    }
+    .menu-open .btn-line:nth-child(2){
+        transform: rotate(45deg);
+    }
+    .menu-open .btn-line:nth-child(3){
+        transform: rotate(-45deg);
+    }
+    .menu-open .btn-line:nth-child(4){
+        transform: scale(0);
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10%;
+        font-size: 40px;
+        background-color: #0a0a0a;
+        transform: translateY(-100%); /*МЕню уходть вверх*/
+        transition: .3s ease; /*Меню исчазает/появляткся плавно*/
+    }
+    .menu-open .menu {
+        transform: translateY(0);/*Мюню возвращается*/
+    }
+    .menu-link {
+        font-size: 55px;
+    }
+    /**/
+    .title {
+        font-size: 30px;
+    }
+    .headline-btn {
+        text-decoration: none;
+        padding: 10px 50px;
+        font-size: 14px;
+    }
+    .news-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .news-text  {
+        width: 100%;
+    }
+    .color-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .item {
+        width: 100%;
+    }
+    .item img {
+        width: 100%;
+    }
+    .contakts {
+        display: none;
+    }
+    .footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+    }
+}
+
+@media  (max-width: 420px) {
+    .phone {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .headline-img {
+        display: none;
+    }
+    .news-img {
+        display: none;
+    }
+    .menu-link {
+        font-size: 30px;
+    }
 }
